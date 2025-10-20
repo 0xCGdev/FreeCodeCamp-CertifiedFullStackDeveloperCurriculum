@@ -1,4 +1,4 @@
-Intruction:
+Instructions:
 
 Sally, a pet adoption store owner, has built her first web page but there are some issues.
 
