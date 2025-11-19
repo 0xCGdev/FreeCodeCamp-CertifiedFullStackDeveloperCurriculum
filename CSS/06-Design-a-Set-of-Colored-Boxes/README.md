@@ -1,4 +1,5 @@
 Instructions: 
+
 Build an app that is functionally similar to this example project. Try not to copy the example project, give it your own personal style.
 In this lab, you'll practice using CSS colors by designing boxes.
 Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
