@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+body {
+    background-color: #F4EAD5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    display: block;
+    margin: 0 auto 1vw auto;
+    font-size: 1.8rem;
+}
+
+label {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.2rem;
+    color: #2B2B2B
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid rgb(54, 54, 54);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.note-error {
+    display: none;
+}
+
+input:hover,
+textarea:hover {
+    border-color: #FF8C42;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #E66A32;
+    outline: none;
+}
+
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+    border-color: crimson;
+}
+
+input:not(:placeholder-shown):valid,
+textarea:not(:placeholder-shown):valid {
+    border-color: green;
+}
+
+input:not(:placeholder-shown):invalid + .note-error,
+textarea:not(:placeholder-shown):invalid + .note-error {
+    display: block;
+    font-size: 0.7rem;
+    color: crimson;
+    position: relative;
+    bottom: 10px;
+}
+
+button {
+    display: block;
+    width: max-content;
+    margin: 0.8rem auto 0 auto;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #FF8C42;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #E66A32;
+}
+
