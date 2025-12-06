@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../asset/wood-background.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+#email {
+    width: 500px;
+    height: 730px;
+    margin-top: 50px;
+    padding: 50px;
+    border: 2px solid crimson;
+    box-sizing: border-box;
+}
+
+.cover {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+width: 1200px;
+height: 800px;
+background-image: url(../asset/cover.png);
+background-size: cover;
+box-shadow:
+    0 15px 30px rgba(0,0,0,0.35),
+    inset 0 0px 12px rgba(0,0,0,0.12);
+border-radius: 15px;
+position: relative;
+overflow: visible;
+z-index: 1;
+}
+
+.cover::before {
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 8px;
+background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.06) 0%,
+    rgba(230, 180, 60, 0.35) 50%,
+    rgba(0, 0, 0, 0.06) 100%
+    );
+border-radius: 50px;
+pointer-events: none;
+filter: blur(0.6px);
+z-index: 1;
+}
+
+.cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='5'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.3'/></svg>");
+    mix-blend-mode: multiply;
+    border-radius: 15px;
+}
+
+.cover2 {
+    background-image: url(../asset/cover.png);
+    background-size: auto;
+    width: 560px;
+    height: 100px;
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    border-radius: 15px 15px 2px 2px;
+    box-shadow: 
+    -5px 0px 10px rgba(0,0,0,0.3),
+    inset 0px -5px 10px rgba(0,0,0,0.2);
+    z-index: 3;
+}
+
+.cover2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n2'><feTurbulence type='fractalNoise' baseFrequency='1.0' numOctaves='4'/></filter><rect width='100%' height='100%' filter='url(%23n2)' opacity='0.3'/></svg>");
+    mix-blend-mode: multiply;
+    border-radius: 15px 15px 3px 3px;
+    z-index: 0;
+}
+
+.polaroid-frame {
+    background-color: #f5f5f5;
+    width: 280px;
+    height: 380px;
+    transform: rotate(-5deg);
+    position: relative;
+    right: 140px;
+    bottom: 12rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) ;
+}
+
+.polaroid-photo {
+    background-color: black;
+    width: 240px;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.clip {
+    width: 120px;
+    position: absolute;
+    transform: translateY(-90px) translateX(30px);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50px) translateX(30px);
+}
+
+.confidential-logo {
+    width: 300px;
+    transform: rotate(5deg);
+    filter: opacity(0.9);
+}
+
+.top-secret-logo {
+    width: 200px;
+    transform: rotate(50deg);
+    position: relative;
+    left: 70px;
+    bottom: 10px;
+    filter: opacity(0.8);
+}
+
+.papers {
+    width: 600px;
+    height: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.paper {
+    background-image: url(../asset/paper.png);
+    background-size: cover;
+    position: absolute;
+    width: 580px;
+    height: 760px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.25);
+    transform-origin: left center;
+}
+
+.paper--3 {
+    top: -20px;
+    transform: rotate(2deg);
+}
+
+.paper--2 {
+    top: 0px;
+    left: 30px;
+    transform: rotate(1deg);
+}
+
+.paper--1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    left: 10px;
+}
+
+#confidential,
+#top-secret {
+    display: inline-block !important;
+    padding: 10px;
+    color: crimson;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 5px solid crimson;
+}
+
+#confidential {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 150px;
+    transform: rotate(20deg);
+}
+
+#top-secret {
+    margin-top: 2rem;
+    margin-left: 100px;
+    transform: rotate(-20deg);
+}
+
+#email p{
+    margin-bottom: 1rem;
+}
+
+.blurred {
+    filter: blur(3px);
+}
