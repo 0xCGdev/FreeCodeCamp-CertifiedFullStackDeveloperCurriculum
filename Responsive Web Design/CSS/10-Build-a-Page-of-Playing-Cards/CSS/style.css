@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100dvh;
+    padding: 5rem 0;
+    gap: 5em;
+    background: url(../asset/background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+header h1 {
+    font-weight: 400;
+    font-size: 3.5em;
+    color: #00fff0;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 0 transparent,
+        0 0 10px #00eaff,
+        0 0 20px #0089a6,
+        0 0 40px #00eaff,
+        0 0 100px #00eaff,
+        0 0 200px #00eaff;
+    animation: animate 3s infinite alternate;
+}
+
+@keyframes animate {
+	40% {
+		opacity: 1;
+	}
+	42% {
+		opacity: 0.8;
+	}
+	43% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 0.3;
+	}
+	46% {
+		opacity: 1;
+	}
+}
+
+#playing-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 0 6vw;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    width: 255px;
+    height: 380px;
+    border-radius: 10px;
+    border: 2px solid #00eaff;
+    box-shadow: 
+        0 0 5px #00eaff,
+        0 0 10px #00eaff,
+        inset 0 0 5px #00eaff;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    color: #00eaff;
+    background-color: #021c2c;
+    border-radius: inherit;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: url(../asset/back.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: inherit;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: center;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-size: 8em;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    align-items: center;
+}
+
+.left,
+.right {
+    font-size: 2.5em;
+    line-height: 0.9;
+}
+
+@media screen and (min-width: 0px) {
+    #playing-cards {
+        gap: 6vw;
+    }
+}
