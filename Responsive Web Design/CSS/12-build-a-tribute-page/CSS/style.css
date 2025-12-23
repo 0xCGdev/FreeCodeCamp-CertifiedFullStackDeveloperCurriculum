@@ -8,6 +8,7 @@
 
 body {
     background-color: rgb(238, 238, 238);
+    min-height: 100vh;
 }
 
 #main {
@@ -21,15 +22,16 @@ body {
 
 #title {
     padding-top: 2rem;
+    font-size: clamp(22px, 6vw, 32px);
 }
 
 #title + p {
-    padding-bottom: 1rem;
+    font-size: clamp(14px, 3.5vw, 18px);
 }
-
 
 #img-div {
     max-width: 55rem;
+    margin: 1rem 0;
 }
 
 #image {
@@ -37,26 +39,26 @@ body {
     width: 100%;
     max-width: 100%;
     height: auto;
-    margin: 1rem auto;
+    margin-bottom: 1rem;
 }
 
 #img-caption {
     width: fit-content;
     margin: 0 auto;
     padding: 0 10px;
-}
-
-#title {
-    text-align: center;
+    font-size: clamp(12px, 3.5vw, 16px);
 }
 
 #headline {
-    margin: 2rem auto 1.5rem auto;
+    margin: 1.5rem auto 1rem auto;
     width: fit-content;
+    font-size: clamp(16px, 4vw, 20px);
 }
 
 .timeline {
     margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 0;
 }
 
 .timeline-item {
@@ -65,7 +67,7 @@ body {
 
 .timeline-dot {
     position: absolute;
-    top: 4px;
+    top: 6px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -78,14 +80,15 @@ body {
     background-color: black;
     color: white;
     border-radius: 5px;
+    font-size: clamp(12px, 2vw, 14px);
     font-weight: bold;
 }
 
 .timeline-content {
     border-left: 3px solid;
     padding: 20px;
-    margin: 3px 0;
     margin-left: 3px;
+    font-size: clamp(12px, 3vw, 16px);
 }
 
 .timeline-item:last-child .timeline-content {
@@ -95,11 +98,13 @@ body {
 blockquote {
     margin: 2rem 0;
     text-align: center;
+    font-size: clamp(14px, 4vw, 16px);
 }
 
 .tribute-footer {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: clamp(16px, 4vw, 18px);
 }
 
 #tribute-link {
@@ -111,25 +116,20 @@ blockquote {
 #tribute-link:hover {
     display: inline-block;
     cursor: pointer;
-    transform: scale(1.02);
     color: #30587D
 }
 
 @media (min-width: 992px) {
 
-    body {
-        height: 100vh;
-    }
-
     #main {
         display: grid;
         grid-template-columns: 2fr 1.4fr;
+        grid-template-rows: auto auto auto 1fr auto;
         column-gap: 3rem;
         align-items: start;
-        border: 1px solid;
         width: 100%;
         max-width: none;
-        min-height: 100vh;
+        min-height: 100dvh;
         margin: 0;
         column-gap: 2rem;
         padding: 0 2rem;
@@ -142,16 +142,12 @@ blockquote {
     }
 
     #img-div {
-        margin: 4rem auto;
+        margin: 3rem auto 0 auto;
     }
 
-    #image {
-        margin: 0;
-        margin-bottom: 1rem;
-    }
 
     #headline {
-        margin: 2rem auto;
+        margin: 3rem auto 1rem auto;
     }
 
     #tribute-info {
@@ -162,18 +158,23 @@ blockquote {
 
     .timeline {
         overflow-y: scroll;
-        height: 50vh;
+        height: clamp(430px, 43vh, 600px);
+    }
+
+    .timeline-item:last-child .timeline-content {
+        padding-bottom: 0;
     }
 
     blockquote {
-        margin: 3rem auto 4rem auto;
+        margin: 0;
+        margin-top: 4rem;
     }
 
     .tribute-footer {
-        margin-bottom: 2rem;
         grid-column: 1 / -1;
         text-align: center;
-        margin: 1rem auto 2rem auto;
+        align-self: end;
+        margin: 1.5rem auto;
         max-width: 60rem;
     }
 }
