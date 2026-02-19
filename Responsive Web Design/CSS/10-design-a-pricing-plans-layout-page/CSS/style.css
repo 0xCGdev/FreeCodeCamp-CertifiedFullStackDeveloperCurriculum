@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-image: url(../asset/Rainbow\ Gradient\ Pink\ and\ Purple\ Virtual\ Background\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 0;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 1rem;
+}
+
+h1,
+p:first-of-type {
+    text-align: center; 
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+.pricing-card {
+    display: flex;
+    flex: 0 0 280px;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all ease 0.3s;
+}
+
+.pricing-card p {
+    border-bottom: 1px solid white;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+.features {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+}
+
+.basic-plan {
+    order: 0;
+}
+
+.pro-plan {
+    order: 1;
+    flex-grow: 2;
+}
+
+.premium-plan {
+    order: 2;
+}
+
+ul {
+    display: block;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.price {
+    margin-top: 5px;
+    margin-bottom: 2rem;
+}
+
+.button {
+    background: linear-gradient(135deg, #140A2E 0%, #5B2A86 50%, #C75A9E 100%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
